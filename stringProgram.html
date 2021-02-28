@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="str()">Click me</button>
+    <script>
+        function str(){
+           let strr =  prompt("Enter any string" , "deep");
+           let n = [];
+            for(let i = 1; i < strr.length; i++){
+                if(strr.charCodeAt(i) >= 65 && strr.charCodeAt(i) <= 90){
+                    for(let k = i+1; k < strr.length; k++){
+                        n.push(strr[k].toLowerCase());
+                    }
+                    let nn = (n.join(''));       
+                     let s = (strr[i]);
+                     let newStr = strr.split(s);
+                     return alert(newStr[0] + " " + s + nn );
+                }
+            }
+            return alert(strr);
+        }
+        
+
+    </script>
+</body>
+</html>
